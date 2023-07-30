@@ -1,0 +1,116 @@
+.main {
+    margin: 100px;
+    display: grid;
+    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        'f f b b b b'
+        'f f t t m m'
+        's s s s s s'
+        'o o o v v v'
+    ;
+    gap: 20px;
+}
+
+.futbol {
+    grid-area: f;
+    background-image: url(futbol.jpg);
+    background-size: cover;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.basketbol {
+    grid-area: b;
+    background-image: url(basketbol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tenis {
+    grid-area: t;
+    background-image: url(tenis.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.motor {
+    grid-area: m;
+    background-image: url(motor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.yuzme {
+    grid-area: s;
+    background-image: url(yuzme.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.olimpiyat {
+    grid-area: o;
+    background-image: url(olimpiyat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.voleybol {
+    grid-area: v;
+    background-image: url(voleybol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 40px;
+    color: white;
+    padding: 5px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.655);
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        margin: 10px;
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'b b'
+            'f t'
+            'f m'
+            's s'
+            'v o'
+        ;
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+
+}
